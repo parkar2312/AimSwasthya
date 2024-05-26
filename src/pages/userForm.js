@@ -1,83 +1,118 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import {
   TextField,
   Button,
-  Typography,
+  Snackbar,
   Container,
-  createMuiTheme,
+  createTheme,
   ThemeProvider,
 } from "@mui/material";
+import Alert from "@mui/material/Alert";
+import AlertTitle from "@mui/material/AlertTitle";
 
-const theme = createMuiTheme();
+const theme = createTheme();
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  const form = useRef();
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  const [open, setOpen] = useState(false);
+  const [severity, setSeverity] = useState();
 
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    console.log(formData);
-    setFormData({
-      name: "",
-      email: "",
-      message: "",
-    });
-  };
 
+    emailjs
+      .sendForm("service_pyo6mmh", "template_372ef21", form.current, {
+        publicKey: "jyQ7L0ssPc_GkRNq-",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          setOpen(true);
+          setSeverity("success");
+
+          window.location.reload(false);
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          setOpen(true);
+          setSeverity("error");
+
+          window.location.reload(false);
+        }
+      );
+  };
+  const hideAlert = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setOpen(false);
+  };
   return (
     <ThemeProvider theme={theme}>
       <Container maxWidth="sm">
-        <h4 class="contact-title">Connect with us</h4>
-        <form onSubmit={handleSubmit}>
-          {/* <TextField
-            variant="standard"
-            label="Name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            fullWidth
-            margin="normal"
-            required
-          /> */}
+        <form ref={form} onSubmit={sendEmail}>
+          <h3 class="new-title">Contact us</h3>
           <TextField
             variant="outlined"
-            label="Email"
-            name="email"
-            type="email"
-            value={formData.email}
-            onChange={handleChange}
+            label="Name"
+            name="user_name"
             fullWidth
             margin="normal"
             required
           />
+          <TextField
+            variant="outlined"
+            label="Email"
+            name="user_email"
+            type="email"
+            fullWidth
+            margin="normal"
+            required
+          />
+
           <TextField
             variant="outlined"
             label="Message"
             name="message"
             multiline
             rows={3}
-            value={formData.message}
-            onChange={handleChange}
             fullWidth
             margin="normal"
             required
           />
           <Button
             variant="contained"
-            color="primary"
+            sx={{
+              color: "white",
+              backgroundColor: "#002E6B",
+              marginTop: "1rem",
+            }}
             type="submit"
+            value="Send"
             fullWidth
             // style={{ marginTop: '1rem' }}
           >
             Submit
           </Button>
+          <Snackbar
+            anchorOrigin={{ vertical: "top", horizontal: "right" }}
+            open={open}
+            autoHideDuration={6000}
+            onClose={hideAlert}
+          >
+            <Alert severity={severity} onClose={hideAlert}>
+            <AlertTitle>Error</AlertTitle>
+            There seems to be an error please send again !
+          </Alert>
+          <Alert severity={severity} onClose={hideAlert}>
+            <AlertTitle>Success</AlertTitle>
+            Messsage sent sucessfully !
+          </Alert>
+           
+          </Snackbar>
+          
         </form>
       </Container>
     </ThemeProvider>

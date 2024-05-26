@@ -9,6 +9,8 @@ import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import CardActions from "@material-ui/core/CardActions";
 import Button from "@material-ui/core/Button";
+import AppleIcon from '@mui/icons-material/Apple';
+import ShopIcon from '@mui/icons-material/Shop';
 
 const useStyles = makeStyles({
   root: {
@@ -45,7 +47,7 @@ export default function SimplePopper() {
         aria-describedby={id}
         type="button"
         onClick={handleClick}
-        style={{ backgroundColor: "#0B515B" }}
+        style={{ backgroundColor: "black" }}
       >
         <motion.div
           whileHover={{ scale: 1.1 }}
@@ -69,12 +71,29 @@ export default function SimplePopper() {
             <CardActions style={{ justifyContent: "center" }}>
               <Button
                 variant="contained"
-                color="primary"
+                color="black"
                 href="/app-download-link"
+                startIcon={<ShopIcon/>}
               >
-                Download Now
+               Get it on Google Play
+                
               </Button>
+             
             </CardActions>
+            <CardActions style={{ justifyContent: "center" }}>
+            <Button
+                variant="contained"
+                color="none"
+                href="/app-download-link"
+                startIcon={<AppleIcon/>}
+              >
+                
+          Download on App Store
+               
+              </Button>
+             
+            </CardActions>
+            
             <CardContent>
               <Typography
                 variant="body2"
@@ -125,18 +144,18 @@ const TriggerButton = styled("button")(
   font-weight: 600;
   font-size: 0.875rem;
   line-height: 1.5;
-  background-color: ${blue[500]};
+  background-color: '#004AAD';
   padding: 8px 16px;
   border-radius: 8px;
   color: white;
   transition: all 150ms ease;
   cursor: pointer;
-  border: 1px solid ${blue[500]};
+  border: 1px solid '#004AAD';
   box-shadow: 0 2px 1px ${
     theme.palette.mode === "dark"
       ? "rgba(0, 0, 0, 0.5)"
       : "rgba(45, 45, 60, 0.2)"
-  }, inset 0 1.5px 1px ${blue[400]}, inset 0 -2px 1px ${blue[600]};
+  }, inset 0 1.5px 1px '#004AAD', inset 0 -2px 1px '#004AAD';
 
   &:hover {
     background-color: ${blue[600]};
@@ -167,7 +186,7 @@ const TriggerButton = styled("button")(
 
 const StyledPopperDiv = styled("div")(
   ({ theme }) => css`
-    background-color: ${theme.palette.mode === "dark" ? grey[900] : "#0B515B"};
+    background-color: ${theme.palette.mode === "dark" ? grey[900] : "#004AAD"};
     border-radius: 8px;
     border: 1px solid ${theme.palette.mode === "dark" ? grey[700] : grey[200]};
     box-shadow: ${theme.palette.mode === "dark"

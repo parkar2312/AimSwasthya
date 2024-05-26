@@ -2,6 +2,7 @@ import React from "react";
 import logoName from "../media/LogoNamev2.png";
 import Logo from "../media/Logov2.PNG";
 import { motion } from "framer-motion";
+import Hearbeat from "./heartbeat";
 
 const Navbar = () => {
   const scrollToSection = (sectionId) => {
@@ -14,8 +15,9 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar__brand">
-        <img className="logo" src={Logo} alt="AimSwasthya" />
+        {/* <img className="logo" src={Logo} alt="AimSwasthya" /> */}
         <img className="logoname" src={logoName} alt="AimSwasthya" />
+        <Hearbeat/>
       </div>
       <ul className="navbar__links">
         <li>

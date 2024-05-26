@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import SimplePopper from "./popup";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
+import AddCardIcon from "@mui/icons-material/AddCard";
 
 const Typewriter = ({ text }) => {
   const containerVariants = {
@@ -46,57 +49,66 @@ const About = () => {
         <h1>
           <Typewriter text={text} />
         </h1>
-        <h4>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+        <h4 className="content-about-text">
+          Discover a seamless way to book appointments with top-tier
+          specialists, ensuring you receive the highest quality of care tailored
+          to your needs. Say goodbye to the frustration of waiting for hours or
+          dealing with cumbersome paperwork. With our app, you can effortlessly
+          schedule appointments, access expert medical advice, and keep track of
+          your health records securely. Streamline your healthcare journey and
+          prioritize your well-being with ease and convenience at your
+          fingertips.
         </h4>
       </div>
       <div>
         <SimplePopper />
       </div>
       <div className="card-container">
-        <div class="about-card">
-          <div class="imageBox">
-            <img src="https://picsum.photos/id/20/300/200" />
+        <div className="about-card">
+          <div className="imageBox">
+            <img src="https://th.bing.com/th/id/OIP.g4GztI08bxhztFvAyvgIygAAAA?rs=1&pid=ImgDetMain" />
+            <div className="imageBox-centered">
+              <h2>Doctors near you</h2>
+              <LocationOnIcon />
+            </div>
           </div>
-          <div class="about-content">
-            <h2>Card One</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-              semper mi id blandit pellentesque. Integer facilisis diam nec
-              tortor bibendum consequat.
-            </p>
-          </div>
-        </div>
-        <div class="about-card">
-          <div class="imageBox">
-            <img src="https://picsum.photos/id/237/300/200" />
-          </div>
-          <div class="about-content">
-            <h2>Card Two</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-              pretium massa non nulla dignissim, nec pharetra tellus auctor. Sed
-              eu ipsum hendrerit, bibendum mauris.
-            </p>
+          <div className="about-content">
+            <h4>
+              Select from over 100 specialist doctors with diverse array of
+              medical experts to meet your unique healthcare needs.
+            </h4>
           </div>
         </div>
-        <div class="about-card">
-          <div class="imageBox">
-            <img src="https://picsum.photos/id/16/300/200" />
+        <div className="about-card">
+          <div className="imageBox">
+            <img src="https://p0.pikist.com/photos/529/727/mobile-phone-mobile-smartphone-smart-phone-cell-phone-phone-technology-device-white.jpg" />
+            <div className="imageBox-centered">
+              <h2>Book Appointments</h2>
+              <CalendarMonthIcon />
+            </div>
           </div>
-          <div class="about-content">
-            <h2>Card Three</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-              eget massa sit amet metus suscipit elementum ut at risus. Proin in
-              neque facilisis, interdum.
-            </p>
+          <div className="about-content">
+            <h4>
+              Easily book hassle-free appointments with our streamlined booking
+              process ensures that you can schedule appointments quickly and
+              efficiently.
+            </h4>
+          </div>
+        </div>
+        <div className="about-card">
+          <div className="imageBox">
+            <img src="https://thumbs.dreamstime.com/b/medical-report-14709207.jpg" />
+            <div className="imageBox-centered">
+              <h2>Access your Health card</h2>
+              <AddCardIcon />
+            </div>
+          </div>
+          <div className="about-content">
+            <h4>
+              Our seamless system allows you to receive your comprehensive
+              health report right after your appointment, ensuring you have all
+              the information you need at your fingertips.
+            </h4>
           </div>
         </div>
       </div>
