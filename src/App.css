@@ -540,12 +540,29 @@ section {
     flex-direction: column;
     align-items: flex-start;
     text-align: center;
+    padding: 10px;
     /* width: 100%; */
   }
-
+  .logoname {
+    width: 10rem;
+    height: 2.5rem;
+  }
+  .navbar__brand{
+margin: auto;  }
+  .navbar__brand .pulse{
+    height: 60px;
+  }
+  /* .logo {
+    width: 4.5rem;
+    height: 2rem;
+  } */
   .navbar__links {
-    margin-top: 20px;
+    /* margin-top: 20px; */
     font-size: medium;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: .6rem;
   }
 
   .navbar__links li {

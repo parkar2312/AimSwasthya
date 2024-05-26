@@ -53,7 +53,7 @@ const ContactForm = () => {
     <ThemeProvider theme={theme}>
       <Container maxWidth="sm">
         <form ref={form} onSubmit={sendEmail}>
-          <h3 class="new-title">Contact us</h3>
+          <h3 className="new-title">Contact us</h3>
           <TextField
             variant="outlined"
             label="Name"
@@ -96,24 +96,29 @@ const ContactForm = () => {
           >
             Submit
           </Button>
-          <Snackbar
-            anchorOrigin={{ vertical: "top", horizontal: "right" }}
-            open={open}
-            autoHideDuration={6000}
-            onClose={hideAlert}
-          >
-            <Alert severity={severity} onClose={hideAlert}>
+        </form>
+        <Snackbar
+          // anchorOrigin={{ vertical: "top", horizontal: "right" }}
+          open={open}
+          autoHideDuration={6000}
+          onClose={hideAlert}
+        >
+          <Alert severity={severity} onClose={hideAlert}>
             <AlertTitle>Error</AlertTitle>
             There seems to be an error please send again !
           </Alert>
+        </Snackbar>
+        <Snackbar
+          // anchorOrigin={{ vertical: "top", horizontal: "right" }}
+          open={open}
+          autoHideDuration={6000}
+          onClose={hideAlert}
+        >
           <Alert severity={severity} onClose={hideAlert}>
             <AlertTitle>Success</AlertTitle>
             Messsage sent sucessfully !
           </Alert>
-           
-          </Snackbar>
-          
-        </form>
+        </Snackbar>
       </Container>
     </ThemeProvider>
   );

@@ -59,20 +59,21 @@ const Services = () => {
                 borderRadius: "0% 0% 100% 0% / 0% 0% 100% 0%",
               }}
             >
-             
-              <h3>
-              <h2>Choose your symptoms</h2>
-                Navigate through a myriad of symptoms meticulously curated
-                within our app, encompassing a spectrum of health concerns.
-                Choose from the most sought-after symptoms or utilize the
-                dynamic search bar to pinpoint your unique symptoms.
-                 {/* Once
+              <div>
+                <h2>Choose your symptoms</h2>
+                <h3>
+                  Navigate through a myriad of symptoms meticulously curated
+                  within our app, encompassing a spectrum of health concerns.
+                  Choose from the most sought-after symptoms or utilize the
+                  dynamic search bar to pinpoint your unique symptoms.
+                  {/* Once
                 identified, explore a comprehensive directory of specialized
                 doctors adept at addressing your specific health needs. Whether
                 it's a common ailment or a rare condition, our platform empowers
                 you to connect with the right healthcare professionals swiftly
                 and efficiently. */}
-              </h3>
+                </h3>
+              </div>
             </div>
           </div>
         </motion.div>
@@ -91,17 +92,20 @@ const Services = () => {
                 borderRadius: "100% 0% 100% 0% / 100% 0% 0% 0%",
               }}
             >
-              <h3>
+              <div>
                 <h2>Book an appointment</h2>
-                After confirming your appointment, receive instant confirmation
-                along with any pertinent details, such as location and
-                preparation instructions, directly to your device.
-                 {/* Additionally,
+                <h3>
+                  After confirming your appointment, receive instant
+                  confirmation along with any pertinent details, such as
+                  location and preparation instructions, directly to your
+                  device.
+                  {/* Additionally,
                 enjoy the convenience of setting reminders to ensure you never
                 miss your scheduled consultation. With our intuitive booking
                 system, prioritize your health effortlessly, leaving you with
                 peace of mind as you embark on your journey towards wellness. */}
-              </h3>
+                </h3>
+              </div>
             </div>
             <div
               className="servicesright"
@@ -137,17 +141,19 @@ const Services = () => {
                 borderRadius: "0% 0% 100% 0% / 0% 0% 100% 0%",
               }}
             >
-              <h3>
+              <div>
                 <h2>Upcoming appointments</h2>
-                Our app provides a user-friendly interface displaying your
-                upcoming appointments, allowing you to effortlessly track the
-                date, time, and designated doctor for each scheduled session.
-                {/* Stay effortlessly organized and informed by receiving timely
+                <h3>
+                  Our app provides a user-friendly interface displaying your
+                  upcoming appointments, allowing you to effortlessly track the
+                  date, time, and designated doctor for each scheduled session.
+                  {/* Stay effortlessly organized and informed by receiving timely
                 reminders, ensuring you never miss a vital consultation. With
                 this intuitive feature, managing your healthcare commitments
                 becomes a seamless part of your routine, empowering you to
                 prioritize your well-being with ease and efficiency. */}
-              </h3>
+                </h3>
+              </div>
             </div>
           </div>
         </motion.div>
@@ -165,19 +171,21 @@ const Services = () => {
                 borderRadius: "100% 0% 100% 0% / 100% 0% 0% 0%",
               }}
             >
-              <h3>
+              <div>
                 <h2>Medical records</h2>
-                Patients have exclusive access to their securely
-                stored medical records, granting them the freedom to review
-                their health history with utmost ease and convenience. Whether
-                for personal reference or to share with healthcare providers.
-                {/* ,
+                <h3>
+                  Patients have exclusive access to their securely stored
+                  medical records, granting them the freedom to review their
+                  health history with utmost ease and convenience. Whether for
+                  personal reference or to share with healthcare providers.
+                  {/* ,
                 our robust security measures ensure that sensitive information
                 remains protected at all times. Seamlessly navigate through your
                 medical records whenever the need arises, empowering you to make
                 informed decisions about your health with confidence and peace
                 of mind. */}
-              </h3>
+                </h3>
+              </div>
             </div>
             <div
               className="servicesright"
@@ -209,19 +217,20 @@ const Services = () => {
               borderRadius: "0% 0% 100% 0% / 0% 0% 100% 0%",
             }}
           >
-            
-            <h3>
-            <h2>Choose your symptoms</h2>
-              Navigate through a myriad of symptoms meticulously curated within
-              our app, encompassing a spectrum of health concerns. Choose from
-              the most sought-after symptoms or utilize the dynamic search bar
-              to pinpoint your unique symptoms. 
-              {/* Once identified, explore a
+            <div>
+              <h2>Choose your symptoms</h2>
+              <h3>
+                Navigate through a myriad of symptoms meticulously curated
+                within our app, encompassing a spectrum of health concerns.
+                Choose from the most sought-after symptoms or utilize the
+                dynamic search bar to pinpoint your unique symptoms.
+                {/* Once identified, explore a
               comprehensive directory of specialized doctors adept at addressing
               your specific health needs. Whether it's a common ailment or a
               rare condition, our platform empowers you to connect with the
               right healthcare professionals swiftly and efficiently. */}
-            </h3>
+              </h3>
+            </div>
           </div>
         </div>
 
@@ -233,17 +242,19 @@ const Services = () => {
               borderRadius: "100% 0% 100% 0% / 100% 0% 0% 0%",
             }}
           >
-            <h3>
+            <div>
               <h2>Book an appointment</h2>
-              After confirming your appointment, receive instant confirmation
-              along with any pertinent details, such as location and preparation
-              instructions, directly to your device. 
-              {/* Additionally, enjoy the
+              <h3>
+                After confirming your appointment, receive instant confirmation
+                along with any pertinent details, such as location and
+                preparation instructions, directly to your device.
+                {/* Additionally, enjoy the
               convenience of setting reminders to ensure you never miss your
               scheduled consultation. With our intuitive booking system,
               prioritize your health effortlessly, leaving you with peace of
               mind as you embark on your journey towards wellness. */}
-            </h3>
+              </h3>
+            </div>
           </div>
           <div
             className="servicesright"
@@ -273,18 +284,20 @@ const Services = () => {
               borderRadius: "0% 0% 100% 0% / 0% 0% 100% 0%",
             }}
           >
-            <h3>
+            <div>
               <h2>Upcoming appointments</h2>
-              Our app provides a user-friendly interface displaying your
-              upcoming appointments, allowing you to effortlessly track the
-              date, time, and designated doctor for each scheduled session. 
-              {/* Stay
+              <h3>
+                Our app provides a user-friendly interface displaying your
+                upcoming appointments, allowing you to effortlessly track the
+                date, time, and designated doctor for each scheduled session.
+                {/* Stay
               effortlessly organized and informed by receiving timely reminders,
               ensuring you never miss a vital consultation. With this intuitive
               feature, managing your healthcare commitments becomes a seamless
               part of your routine, empowering you to prioritize your well-being
               with ease and efficiency. */}
-            </h3>
+              </h3>
+            </div>
           </div>
         </div>
 
@@ -296,18 +309,20 @@ const Services = () => {
               borderRadius: "100% 0% 100% 0% / 100% 0% 0% 0%",
             }}
           >
-            <h3>
+            <div>
               <h2>Medical records</h2>
-              Within our app, patients have exclusive access to their securely
-              stored medical records, granting them the freedom to review their
-              health history with utmost ease and convenience. Whether for
-              personal reference or to share with healthcare provider.
-               {/* our
+              <h3>
+                Within our app, patients have exclusive access to their securely
+                stored medical records, granting them the freedom to review
+                their health history with utmost ease and convenience. Whether
+                for personal reference or to share with healthcare provider.
+                {/* our
               robust security measures ensure that sensitive information remains
               protected at all times. Seamlessly navigate through your medical
               records whenever the need arises, empowering you to make informed
               decisions about your health with confidence and peace of mind. */}
-            </h3>
+              </h3>
+            </div>
           </div>
           <div
             className="servicesright"
