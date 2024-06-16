@@ -185,7 +185,7 @@ section {
 }
 
 .card-container .about-card:hover {
-  height: 325px;
+  height: 300px;
 }
 
 .card-container .about-card .imageBox {
@@ -580,7 +580,13 @@ margin: auto;  }
   .content {
     padding: 20px;
   }
-
+.about-content h4{
+  padding: 0%;
+}
+.about-card{
+  height: 150px;
+  margin: 0px;
+}
   .card-container {
     margin-top: 5rem;
     max-width: 400px;
@@ -589,8 +595,9 @@ margin: auto;  }
     margin-top: 5rem;
   }
   #services {
-    margin-top: 15rem;
+    margin-top: 8rem;
   }
+ 
   .flex-container {
     flex-direction: column;
   }
@@ -624,6 +631,15 @@ margin: auto;  }
     width: 100px;
   }
 }
+@media only screen and (min-width: 350px) and (max-width: 400px)  {
+  #services{
+    margin-top: 12rem;
+  }
+  body:has(.card-container .about-card:hover:hover) #services {
+    margin-top: 40vh;
+    transition: .5s;
+  }
+  }
 
 /*  */
 /*  */
@@ -970,7 +986,7 @@ textarea.new-input {
   opacity: 0.2;
 }
 
-@media (max-width: 850px) {
+@media (max-width: 768px) {
   .new-form {
     grid-template-columns: 1fr;
   }
@@ -1008,7 +1024,7 @@ textarea.new-input {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .new-container {
     padding: 1.5rem;
   }

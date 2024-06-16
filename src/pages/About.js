@@ -4,6 +4,9 @@ import SimplePopper from "./popup";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import CalendarMonthIcon from "@mui/icons-material/CalendarMonth";
 import AddCardIcon from "@mui/icons-material/AddCard";
+import card1 from "../media/card1.jpg";
+import card2 from "../media/card2.jpg";
+import card3 from "../media/card3.webp";
 
 const Typewriter = ({ text }) => {
   const containerVariants = {
@@ -66,7 +69,7 @@ const About = () => {
       <div className="card-container">
         <div className="about-card">
           <div className="imageBox">
-            <img src="https://th.bing.com/th/id/OIP.g4GztI08bxhztFvAyvgIygAAAA?rs=1&pid=ImgDetMain" />
+            <img src={card1} />
             <div className="imageBox-centered">
               <h2>Doctors near you</h2>
               <LocationOnIcon />
@@ -81,7 +84,7 @@ const About = () => {
         </div>
         <div className="about-card">
           <div className="imageBox">
-            <img src="https://p0.pikist.com/photos/529/727/mobile-phone-mobile-smartphone-smart-phone-cell-phone-phone-technology-device-white.jpg" />
+            <img src={card2} />
             <div className="imageBox-centered">
               <h2>Book Appointments</h2>
               <CalendarMonthIcon />
@@ -97,7 +100,7 @@ const About = () => {
         </div>
         <div className="about-card">
           <div className="imageBox">
-            <img src="https://thumbs.dreamstime.com/b/medical-report-14709207.jpg" />
+            <img src={card3} />
             <div className="imageBox-centered">
               <h2>Access your Health card</h2>
               <AddCardIcon />
@@ -106,7 +109,7 @@ const About = () => {
           <div className="about-content">
             <h4>
               Our seamless system allows you to receive your comprehensive
-              health report right after your appointment, ensuring you have all
+              health report, ensuring you have all
               the information you need at your fingertips.
             </h4>
           </div>

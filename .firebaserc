@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "default": "aimswasthya-connect",
+    "Aimswasthya": "aimswasthya-connect"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
+}

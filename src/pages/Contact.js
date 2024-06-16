@@ -22,7 +22,7 @@ const Contact = () => {
           <Hearbeat />
         </div>
         <div className="contact-about">
-          A easy solution app for patients to connect with specialized doctors
+          An easy solution app for patients to connect with specialized doctors
           around you.
         </div>
       </div>
@@ -95,8 +95,8 @@ const Contact = () => {
           </div>
 
           <div className="new-contact-form">
-            <span className="new-circle one"></span>
-            <span className="new-circle two"></span>
+            {/* <span className="new-circle one"></span> */}
+            {/* <span className="new-circle two"></span> */}
 
             <ContactForm />
           </div>
